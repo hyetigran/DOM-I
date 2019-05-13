@@ -41,6 +41,8 @@ const siteContent = {
 		copyright: 'Copyright Great Idea! 2018'
 	}
 };
+// Global color green for nav bar
+let navColor = 'green';
 
 // Example: Update the img src for the logo
 let logo = document.getElementById('logo-img');
@@ -51,18 +53,19 @@ for (i = 0; i < links.length; i++) {
 	links[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
 }
 // Navigation Text Color Green ...only works on first element
-let navColor = document.querySelector('a');
-navColor.style.color = 'green';
+[...links].forEach(el => (el.style.color = navColor));
 
 // Append and Prepend Element
 let navEl = document.querySelector('nav');
 let home = document.createElement('a');
 home.textContent = 'Home';
 navEl.prepend(home);
+home.style.color = navColor;
 
 let team = document.createElement('a');
 team.textContent = 'Team';
 navEl.appendChild(team);
+team.style.color = navColor;
 
 // CTA section
 let ctaImg = document.getElementById('cta-img');
