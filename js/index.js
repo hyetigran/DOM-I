@@ -54,6 +54,10 @@ for (i = 0; i < links.length; i++) {
 let navColor = document.querySelector('a');
 navColor.style.color = 'green';
 
+// Append and Prepend Element ...throws errors
+let home = document.querySelector('a').appendChild('Home');
+let team = document.querySelector('a').prepend('Team');
+
 // CTA section
 let ctaImg = document.getElementById('cta-img');
 ctaImg.setAttribute('src', siteContent['cta']['img-src']);
