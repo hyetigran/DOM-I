@@ -50,9 +50,11 @@ let links = document.querySelectorAll('a');
 for (i = 0; i < links.length; i++) {
 	links[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
 }
+// Navigation Text Color Green ...only works on first element
+let navColor = document.querySelector('a');
+navColor.style.color = 'green';
 
 // CTA section
-
 let ctaImg = document.getElementById('cta-img');
 ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 
